@@ -17,6 +17,15 @@ public class Part08OtherOperations {
 
 	// TODO Create a Flux of user from Flux of username, firstname and lastname.
 	Flux<User> userFluxFromStringFlux(Flux<String> usernameFlux, Flux<String> firstnameFlux, Flux<String> lastnameFlux) {
+
+
+		//Work in progress
+//		return Flux.zip(
+//				usernameFlux, firstnameFlux, lastnameFlux,
+//				(s1, s2, s3) ->{
+//			return new User(s1,s2,s3);
+//		});
+
 		return null;
 	}
 

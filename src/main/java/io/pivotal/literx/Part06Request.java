@@ -17,9 +17,14 @@ public class Part06Request {
 
 //========================================================================================
 
-	// TODO Create a StepVerifier that initially requests all values and expect 4 values to be received
+	// TODOx Create a StepVerifier that initially requests all values and expect 4 values to be received
 	StepVerifier requestAllExpectFour(Flux<User> flux) {
-		return null;
+		Flux<User> all = repository.findAll();
+
+		return StepVerifier.create(all)
+				.expectNextCount(4l)
+				.expectComplete();
+
 	}
 
 //========================================================================================
